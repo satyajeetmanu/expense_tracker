@@ -1,2 +1,8 @@
 > in Dart, we can use initializer lists to initialise class properties with values that are not received as 
     arguments to the constructor function.
+
+> enum is a keyword that allows us to create a custom type, which is simply a combination of predefined
+    allowed values.
+
+> using column to display long lists costs a lot of performance, we can use ListView.builder, which makes
+    a scrollable list and builds only those items of the list which can be current displayed to the screen.
