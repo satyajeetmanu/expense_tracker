@@ -11,3 +11,8 @@
 
 > context: contains metadata information related to the widget and very importantly the widget's
 position in the overall UI's widget tree.
+
+> Use ThemeData().copyWith(...) (creates a copy of the default theme set by flutter and we override only some 
+    selected aspects) instead of ThemeData(...) (which creates a theme from scratch and we have to override 
+    every detail).
+> Theming allows us to change the appearance of widgets at one central place.
