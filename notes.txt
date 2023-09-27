@@ -16,3 +16,5 @@ position in the overall UI's widget tree.
     selected aspects) instead of ThemeData(...) (which creates a theme from scratch and we have to override 
     every detail).
 > Theming allows us to change the appearance of widgets at one central place.
+
+> MediaQuery gives us information about the environment in which our app is currently running.

@@ -1,3 +1,4 @@
+import 'package:expense_tracker/chart/chart.dart';
 import 'package:expense_tracker/widgets/expenses_list/expenses_list.dart';
 import 'package:expense_tracker/models/expense.dart';
 import 'package:expense_tracker/widgets/new_expense.dart';
@@ -11,18 +12,7 @@ class Expenses extends StatefulWidget {
 }
 
 class _ExpensesState extends State<Expenses> {
-  final List<Expense> _registeredExpenses = [
-    Expense(
-        title: 'Flutter course',
-        amount: 100.99,
-        date: DateTime.now(),
-        category: Category.work),
-    Expense(
-        title: 'Movie',
-        amount: 250.19,
-        date: DateTime.now(),
-        category: Category.leisure),
-  ];
+  final List<Expense> _registeredExpenses = [];
   void _addNewExpense(Expense expense) {
     setState(() {
       _registeredExpenses.add(expense);
@@ -83,7 +73,7 @@ class _ExpensesState extends State<Expenses> {
       ),
       body: Column(
         children: [
-          const Text('Chart'),
+          Chart(expenses: _registeredExpenses),
           Expanded(
             child: currentContent,
           ),
