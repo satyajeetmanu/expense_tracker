@@ -146,6 +146,9 @@ class _NewExpenseState extends State<NewExpense> {
                 onPressed: _saveExpense,
                 child: const Text('Save'),
               ),
+              const SizedBox(
+                width: 8,
+              ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
