@@ -18,3 +18,7 @@ position in the overall UI's widget tree.
 > Theming allows us to change the appearance of widgets at one central place.
 
 > MediaQuery gives us information about the environment in which our app is currently running.
+
+> Responsiveness: adjustment of layout and styling according to the available space and to the mode in which
+    the app is running(portrait/landscape).
+
