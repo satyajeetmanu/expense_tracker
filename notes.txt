@@ -22,3 +22,8 @@ position in the overall UI's widget tree.
 > Responsiveness: adjustment of layout and styling according to the available space and to the mode in which
     the app is running(portrait/landscape).
 
+> Widgets get sized based on their size preferences and parent widget size constraints.
+
+> Wrapping unconstrained widgets with expanded makes sure that unconstrained widgets inside of other 
+    unconstrained widgets doesn't cause any problems.
+    
