@@ -51,6 +51,12 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+
+    print(width);
+    print(height);
+
     Widget currentContent = const Center(
       child: Text('There are no expenses right now. Try adding some!'),
     );
@@ -62,23 +68,31 @@ class _ExpensesState extends State<Expenses> {
       );
     }
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Expense tracker'),
-        actions: [
-          IconButton(
-            onPressed: _addExpenseOverlay,
-            icon: const Icon(Icons.add),
-          )
-        ],
-      ),
-      body: Column(
-        children: [
-          Chart(expenses: _registeredExpenses),
-          Expanded(
-            child: currentContent,
-          ),
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Expense tracker'),
+          actions: [
+            IconButton(
+              onPressed: _addExpenseOverlay,
+              icon: const Icon(Icons.add),
+            )
+          ],
+        ),
+        body: width < 600
+            ? Column(
+                children: [
+                  Chart(expenses: _registeredExpenses),
+                  Expanded(
+                    child: currentContent,
+                  ),
+                ],
+              )
+            : Row(
+                children: [
+                  Expanded(child: Chart(expenses: _registeredExpenses)),
+                  Expanded(
+                    child: currentContent,
+                  ),
+                ],
+              ));
   }
 }
