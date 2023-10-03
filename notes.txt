@@ -31,3 +31,5 @@ position in the overall UI's widget tree.
     using the widget(built by LayoutBuilder) anywhere else in the widget tree and it would care about the 
     constraints set by the parent widget. It would not care about the available screen width or height, as
     MediaQuery does.
+
+> The 'Platform' class gives information about the platform on which the app is running.
